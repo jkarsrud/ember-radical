@@ -55,7 +55,7 @@
     {
       "file": "addon/components/rad-popover/content.js",
       "line": 139,
-      "description": "<p>Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow</p>\n",
+      "description": "<p>Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow. If the popover expands beneath the body,\nwe also set it to popover upwards instead.</p>\n",
       "itemtype": "event",
       "name": "didRender",
       "return": {
@@ -140,7 +140,7 @@
     },
     {
       "file": "addon/components/rad-popover/content.js",
-      "line": 181,
+      "line": 191,
       "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n<code>rad-popover</code> element. Real abnoxious when you're trying to click something.\nFire the link or button manually. Through the wonderful power of JavaScript.</p>\n",
       "itemtype": "event",
       "name": "touchEnd",
@@ -274,7 +274,7 @@
     {
       "file": "addon/components/rad-popover/content.js",
       "line": 139,
-      "description": "<p>Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow</p>\n",
+      "description": "<p>Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow. If the popover expands beneath the body,\nwe also set it to popover upwards instead.</p>\n",
       "itemtype": "event",
       "name": "didRender",
       "return": {
@@ -299,7 +299,7 @@
     },
     {
       "file": "addon/components/rad-popover/content.js",
-      "line": 181,
+      "line": 191,
       "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n<code>rad-popover</code> element. Real abnoxious when you're trying to click something.\nFire the link or button manually. Through the wonderful power of JavaScript.</p>\n",
       "itemtype": "event",
       "name": "touchEnd",

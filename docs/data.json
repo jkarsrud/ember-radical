@@ -509,7 +509,7 @@
             "extension_for": [],
             "file": "addon/components/rad-button.js",
             "line": 6,
-            "description": "The `rad-button` component is used for all user interaction targets in Ember\nRadical. The component handles a number of housekeeping tasks including:\n- Outline suppression only on clicks\n- Tag firing when enabled\n- Aria and html attributes\n\n{{#rad-button}}Rad Button{{/rad-button}}\n\nConfiguration | Type | Default | Description\n--- | --- | --- | ---\n`link` | boolean | `false` | Toggles the `.btn-link` class, making the button look and act like a link\n`brand` | {'primary', 'secondary', 'info' etc. } | `null` | Toggles brand class for a branded button",
+            "description": "The `rad-button` component is used for all user interaction targets in Ember\nRadical. The component handles a number of housekeeping tasks including:\n- Outline suppression only on clicks\n- Tag firing when enabled\n- Aria and html attributes\n\n{{#rad-button}}Rad Button{{/rad-button}}\n\nConfiguration | Type | Default | Description\n--- | --- | --- | ---\n`brand` | {'primary', 'secondary', 'info' etc. } | `null` | Adds classes for a styled button\n`outline` | boolean | `false` | Adds outline button class. _(Requires a `brand` property.)_\n`link` | boolean | `false` | Adds classes to make the button look and act like a link",
             "is_constructor": 1,
             "extends": "Ember.Component"
         },
@@ -998,7 +998,7 @@
         {
             "file": "addon/components/rad-dropdown/content.js",
             "line": 129,
-            "description": "Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n`rad-dropdown` element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.",
+            "description": "Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the `focusOut` and the `mouseLeave` on the\n`rad-dropdown` element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.",
             "itemtype": "event",
             "name": "touchEnd",
             "class": "Component.RadDropdown.Content"
@@ -1361,7 +1361,7 @@
         {
             "file": "addon/components/rad-popover/content.js",
             "line": 139,
-            "description": "Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow",
+            "description": "Handle checking component width against window width on render. If overflowing\nreset the width of the popover to prevent overflow. If the popover expands beneath the body,\nwe also set it to popover upwards instead.",
             "itemtype": "event",
             "name": "didRender",
             "return": {
@@ -1372,7 +1372,7 @@
         },
         {
             "file": "addon/components/rad-popover/content.js",
-            "line": 181,
+            "line": 191,
             "description": "Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n`rad-popover` element. Real abnoxious when you're trying to click something.\nFire the link or button manually. Through the wonderful power of JavaScript.",
             "itemtype": "event",
             "name": "touchEnd",
@@ -1727,7 +1727,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 33,
+            "line": 34,
             "description": "Internal method that handles firiing a tag with or without custom dimensions.",
             "itemtype": "method",
             "name": "_fireTag",
@@ -1739,7 +1739,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 56,
+            "line": 57,
             "description": "Pass a brand to have `btn-${brand}` class applied",
             "itemtype": "property",
             "name": "brand",
@@ -1752,7 +1752,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 65,
+            "line": 66,
             "description": "Pass true to create a button that looks and behaves like a link. This is\nuseful for creating accessible interaction targets.",
             "itemtype": "property",
             "name": "link",
@@ -1765,7 +1765,17 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 75,
+            "line": 76,
+            "description": "Pass a {{c-l 'brand'}} along with `true` for `outline` to include outline style\nclasses.",
+            "itemtype": "property",
+            "name": "outline",
+            "type": "{boolean}",
+            "default": "false",
+            "class": "Component.RadButton"
+        },
+        {
+            "file": "addon/components/rad-button.js",
+            "line": 84,
             "description": "Tagging property. See `one-tag` for tagging documentation.",
             "itemtype": "property",
             "name": "tagcategory",
@@ -1778,7 +1788,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 84,
+            "line": 93,
             "description": "Tagging property. See `one-tag` for tagging documentation.",
             "itemtype": "property",
             "name": "tagaction",
@@ -1791,7 +1801,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 93,
+            "line": 102,
             "description": "Tagging property. See `one-tag` for tagging documentation. Set to undefined\nso the tagging service will properly correct an un-passed value.",
             "itemtype": "property",
             "name": "taglabel",
@@ -1804,7 +1814,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 104,
+            "line": 113,
             "description": "Tagging property. See `one-tag` for tagging documentation.",
             "itemtype": "property",
             "name": "tagvalue",
@@ -1817,7 +1827,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 113,
+            "line": 122,
             "description": "Tagging property. See `one-tag` for tagging documentation.",
             "itemtype": "property",
             "name": "tagcd",
@@ -1830,7 +1840,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 122,
+            "line": 131,
             "description": "Tagging property. Handles firing a tag on hover when true.",
             "itemtype": "property",
             "name": "taghover",
@@ -1843,7 +1853,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 131,
+            "line": 140,
             "description": "Tagging property. See `one-tag` for tagging documentation.",
             "itemtype": "property",
             "name": "tagonce",
@@ -1856,19 +1866,8 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 144,
-            "description": "Behavior to execute when clicking the button; pass any closure action in and Ember's built-in click event listener will execute it for you.",
-            "itemtype": "property",
-            "name": "click",
-            "access": "public",
-            "tagname": "",
-            "passed": "",
-            "class": "Component.RadButton"
-        },
-        {
-            "file": "addon/components/rad-button.js",
-            "line": 154,
-            "description": "Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names",
+            "line": 153,
+            "description": "Generate color class using presence of {{c-l 'brand'}} and {{c-l 'outline'}}\nflags.",
             "itemtype": "property",
             "name": "brandClass",
             "type": "{string}",
@@ -1877,12 +1876,16 @@
                 {
                     "name": "'brand'",
                     "description": ""
+                },
+                {
+                    "name": "'outline'",
+                    "description": ""
                 }
             ]
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 168,
+            "line": 172,
             "description": "ALLLLLLLLLLL the attributes you might need.\nNOTE: `role` should not be bound here. You can set the role of a button\nby passing an [ariaRole](http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole) prop.",
             "itemtype": "property",
             "name": "attributeBindings",
@@ -1891,7 +1894,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 186,
+            "line": 190,
             "description": "Bind standard rad classname for component: `rad-button`",
             "itemtype": "property",
             "name": "classNames",
@@ -1900,7 +1903,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 195,
+            "line": 199,
             "description": "Handle binding brand and link related css class names",
             "itemtype": "property",
             "name": "classNameBindings",
@@ -1909,7 +1912,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 204,
+            "line": 209,
             "description": "Button DOM element",
             "itemtype": "property",
             "name": "tagName",
@@ -1919,7 +1922,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 211,
+            "line": 216,
             "description": "Include type button for usability.",
             "itemtype": "property",
             "name": "type",
@@ -1929,7 +1932,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 222,
+            "line": 227,
             "description": "The `mouseDown` event is used for some utility/housekeeping methods because\nwe use the `click` event to pass in actions.\n\nHandle setting the outline on this element to `none` because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!\n\nHandle checking for a tagging category and if one exists, fire a tag.\n\nIf you need to override this event, be sure to call `this._super();`",
             "itemtype": "event",
             "name": "mouseDown",
@@ -1941,7 +1944,7 @@
         },
         {
             "file": "addon/components/rad-button.js",
-            "line": 253,
+            "line": 258,
             "description": "The `mouseEnter` checks for a tagging category and hover flag. If they're\npresent a tag is fired.\n\nIf you need to override this event, be sure to call `this._super();`\nTODO: Only include this if Tagging feature is enabled",
             "itemtype": "event",
             "name": "mouseEnter",
@@ -3745,15 +3748,11 @@
         },
         {
             "message": "unknown tag: passed",
-            "line": " addon/components/rad-button.js:56"
+            "line": " addon/components/rad-button.js:57"
         },
         {
             "message": "unknown tag: passed",
-            "line": " addon/components/rad-button.js:65"
-        },
-        {
-            "message": "unknown tag: passed",
-            "line": " addon/components/rad-button.js:75"
+            "line": " addon/components/rad-button.js:66"
         },
         {
             "message": "unknown tag: passed",
@@ -3765,7 +3764,7 @@
         },
         {
             "message": "unknown tag: passed",
-            "line": " addon/components/rad-button.js:104"
+            "line": " addon/components/rad-button.js:102"
         },
         {
             "message": "unknown tag: passed",
@@ -3781,7 +3780,7 @@
         },
         {
             "message": "unknown tag: passed",
-            "line": " addon/components/rad-button.js:144"
+            "line": " addon/components/rad-button.js:140"
         },
         {
             "message": "unknown tag: passed",

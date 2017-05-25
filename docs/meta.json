@@ -2,7 +2,7 @@
   "parser": "YUIDoc",
   "name": "Ember Radical Docs",
   "description": "API documentation for Ember Radical Components, Helpers and Services",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "repository": "https://github.com/healthsparq/ember-radical",
   "guides": [],
   "modules": [],

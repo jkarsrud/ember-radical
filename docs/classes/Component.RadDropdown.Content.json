@@ -90,7 +90,7 @@
     {
       "file": "addon/components/rad-dropdown/content.js",
       "line": 129,
-      "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n<code>rad-dropdown</code> element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.</p>\n",
+      "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the <code>focusOut</code> and the <code>mouseLeave</code> on the\n<code>rad-dropdown</code> element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.</p>\n",
       "itemtype": "event",
       "name": "touchEnd",
       "class": "Component.RadDropdown.Content",
@@ -198,7 +198,7 @@
     {
       "file": "addon/components/rad-dropdown/content.js",
       "line": 129,
-      "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the focusOut and the mouseLeave on the\n<code>rad-dropdown</code> element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.</p>\n",
+      "description": "<p>Nasty touch eventses. Tricksy touch eventses. Any short touch event on this\ncontent component will fire the <code>focusOut</code> and the <code>mouseLeave</code> on the\n<code>rad-dropdown</code> element. Real abnoxious when you're trying to click\nsomething. Fire the link or button manually. Through the wonderful power\nof JavaScript.</p>\n",
       "itemtype": "event",
       "name": "touchEnd",
       "class": "Component.RadDropdown.Content",

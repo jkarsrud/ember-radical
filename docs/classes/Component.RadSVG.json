@@ -70,7 +70,7 @@
   "extension_for": [],
   "file": "addon/components/rad-svg.js",
   "line": 4,
-  "description": "<p>Core component for rendering svg icons. Expects an svg id as <code>svgId</code>.</p>\n<h4>Usage:</h4>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>rad<span class=\"token operator\">-</span>svg svgId<span class=\"token operator\">=</span><span class=\"token string\">\"bubbles\"</span> classNames<span class=\"token operator\">=</span><span class=\"token string\">\"radical\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+  "description": "<p>Core component for rendering svg icons. Expects an svg id as <code>svgId</code>.</p>\n{{#fountainhead-header tagName=\"h4\" elementId=\"usage:\"}}Usage:{{/fountainhead-header}}\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>rad<span class=\"token operator\">-</span>svg svgId<span class=\"token operator\">=</span><span class=\"token string\">\"bubbles\"</span> classNames<span class=\"token operator\">=</span><span class=\"token string\">\"radical\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [],

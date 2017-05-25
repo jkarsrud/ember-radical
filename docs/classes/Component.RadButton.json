@@ -4,7 +4,7 @@
   "classitems": [
     {
       "file": "addon/components/rad-button.js",
-      "line": 33,
+      "line": 34,
       "description": "<p>Internal method that handles firiing a tag with or without custom dimensions.</p>\n",
       "itemtype": "method",
       "name": "_fireTag",
@@ -17,7 +17,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 168,
+      "line": 172,
       "description": "<p>ALLLLLLLLLLL the attributes you might need.\nNOTE: <code>role</code> should not be bound here. You can set the role of a button\nby passing an <a href=\"http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole\">ariaRole</a> prop.</p>\n",
       "itemtype": "property",
       "name": "attributeBindings",
@@ -27,7 +27,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 56,
+      "line": 57,
       "description": "<p>Pass a brand to have <code>btn-${brand}</code> class applied</p>\n",
       "itemtype": "property",
       "name": "brand",
@@ -41,8 +41,8 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 154,
-      "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+      "line": 153,
+      "description": "<p>Generate color class using presence of {{c-l 'brand'}} and {{c-l 'outline'}}\nflags.</p>\n",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{string}",
@@ -51,13 +51,17 @@
         {
           "name": "'brand'",
           "description": ""
+        },
+        {
+          "name": "'outline'",
+          "description": ""
         }
       ],
       "srcFileId": "addon_components_rad-button.js"
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 195,
+      "line": 199,
       "description": "<p>Handle binding brand and link related css class names</p>\n",
       "itemtype": "property",
       "name": "classNameBindings",
@@ -67,7 +71,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 186,
+      "line": 190,
       "description": "<p>Bind standard rad classname for component: <code>rad-button</code></p>\n",
       "itemtype": "property",
       "name": "classNames",
@@ -77,19 +81,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 144,
-      "description": "<p>Behavior to execute when clicking the button; pass any closure action in and Ember's built-in click event listener will execute it for you.</p>\n",
-      "itemtype": "property",
-      "name": "click",
-      "access": "public",
-      "tagname": "",
-      "passed": "",
-      "class": "Component.RadButton",
-      "srcFileId": "addon_components_rad-button.js"
-    },
-    {
-      "file": "addon/components/rad-button.js",
-      "line": 65,
+      "line": 66,
       "description": "<p>Pass true to create a button that looks and behaves like a link. This is\nuseful for creating accessible interaction targets.</p>\n",
       "itemtype": "property",
       "name": "link",
@@ -103,7 +95,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 222,
+      "line": 227,
       "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
       "itemtype": "event",
       "name": "mouseDown",
@@ -116,7 +108,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 253,
+      "line": 258,
       "description": "<p>The <code>mouseEnter</code> checks for a tagging category and hover flag. If they're\npresent a tag is fired.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code>\nTODO: Only include this if Tagging feature is enabled</p>\n",
       "itemtype": "event",
       "name": "mouseEnter",
@@ -129,7 +121,18 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 204,
+      "line": 76,
+      "description": "<p>Pass a {{c-l 'brand'}} along with <code>true</code> for <code>outline</code> to include outline style\nclasses.</p>\n",
+      "itemtype": "property",
+      "name": "outline",
+      "type": "{boolean}",
+      "default": "false",
+      "class": "Component.RadButton",
+      "srcFileId": "addon_components_rad-button.js"
+    },
+    {
+      "file": "addon/components/rad-button.js",
+      "line": 209,
       "description": "<p>Button DOM element</p>\n",
       "itemtype": "property",
       "name": "tagName",
@@ -140,7 +143,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 84,
+      "line": 93,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagaction",
@@ -154,7 +157,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 75,
+      "line": 84,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagcategory",
@@ -168,7 +171,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 113,
+      "line": 122,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagcd",
@@ -182,7 +185,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 122,
+      "line": 131,
       "description": "<p>Tagging property. Handles firing a tag on hover when true.</p>\n",
       "itemtype": "property",
       "name": "taghover",
@@ -196,7 +199,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 93,
+      "line": 102,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation. Set to undefined\nso the tagging service will properly correct an un-passed value.</p>\n",
       "itemtype": "property",
       "name": "taglabel",
@@ -210,7 +213,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 131,
+      "line": 140,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagonce",
@@ -224,7 +227,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 104,
+      "line": 113,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagvalue",
@@ -238,7 +241,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 211,
+      "line": 216,
       "description": "<p>Include type button for usability.</p>\n",
       "itemtype": "property",
       "name": "type",
@@ -254,13 +257,13 @@
   "extension_for": [],
   "file": "addon/components/rad-button.js",
   "line": 6,
-  "description": "<p>The <code>rad-button</code> component is used for all user interaction targets in Ember\nRadical. The component handles a number of housekeeping tasks including:</p>\n<ul>\n<li>Outline suppression only on clicks</li>\n<li>Tag firing when enabled</li>\n<li>Aria and html attributes</li>\n</ul>\n<p>{{#rad-button}}Rad Button{{/rad-button}}</p>\n<table>\n<thead>\n<tr>\n<th>Configuration</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>link</code></td>\n<td>boolean</td>\n<td><code>false</code></td>\n<td>Toggles the <code>.btn-link</code> class, making the button look and act like a link</td>\n</tr>\n<tr>\n<td><code>brand</code></td>\n<td>{'primary', 'secondary', 'info' etc. }</td>\n<td><code>null</code></td>\n<td>Toggles brand class for a branded button</td>\n</tr>\n</tbody>\n</table>\n",
+  "description": "<p>The <code>rad-button</code> component is used for all user interaction targets in Ember\nRadical. The component handles a number of housekeeping tasks including:</p>\n<ul>\n<li>Outline suppression only on clicks</li>\n<li>Tag firing when enabled</li>\n<li>Aria and html attributes</li>\n</ul>\n<p>{{#rad-button}}Rad Button{{/rad-button}}</p>\n<table>\n<thead>\n<tr>\n<th>Configuration</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>brand</code></td>\n<td>{'primary', 'secondary', 'info' etc. }</td>\n<td><code>null</code></td>\n<td>Adds classes for a styled button</td>\n</tr>\n<tr>\n<td><code>outline</code></td>\n<td>boolean</td>\n<td><code>false</code></td>\n<td>Adds outline button class. <em>(Requires a <code>brand</code> property.)</em></td>\n</tr>\n<tr>\n<td><code>link</code></td>\n<td>boolean</td>\n<td><code>false</code></td>\n<td>Adds classes to make the button look and act like a link</td>\n</tr>\n</tbody>\n</table>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [
     {
       "file": "addon/components/rad-button.js",
-      "line": 33,
+      "line": 34,
       "description": "<p>Internal method that handles firiing a tag with or without custom dimensions.</p>\n",
       "itemtype": "method",
       "name": "_fireTag",
@@ -275,7 +278,7 @@
   "property": [
     {
       "file": "addon/components/rad-button.js",
-      "line": 168,
+      "line": 172,
       "description": "<p>ALLLLLLLLLLL the attributes you might need.\nNOTE: <code>role</code> should not be bound here. You can set the role of a button\nby passing an <a href=\"http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole\">ariaRole</a> prop.</p>\n",
       "itemtype": "property",
       "name": "attributeBindings",
@@ -285,7 +288,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 56,
+      "line": 57,
       "description": "<p>Pass a brand to have <code>btn-${brand}</code> class applied</p>\n",
       "itemtype": "property",
       "name": "brand",
@@ -299,8 +302,8 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 154,
-      "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+      "line": 153,
+      "description": "<p>Generate color class using presence of {{c-l 'brand'}} and {{c-l 'outline'}}\nflags.</p>\n",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{string}",
@@ -309,13 +312,17 @@
         {
           "name": "'brand'",
           "description": ""
+        },
+        {
+          "name": "'outline'",
+          "description": ""
         }
       ],
       "srcFileId": "addon_components_rad-button.js"
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 195,
+      "line": 199,
       "description": "<p>Handle binding brand and link related css class names</p>\n",
       "itemtype": "property",
       "name": "classNameBindings",
@@ -325,7 +332,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 186,
+      "line": 190,
       "description": "<p>Bind standard rad classname for component: <code>rad-button</code></p>\n",
       "itemtype": "property",
       "name": "classNames",
@@ -335,19 +342,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 144,
-      "description": "<p>Behavior to execute when clicking the button; pass any closure action in and Ember's built-in click event listener will execute it for you.</p>\n",
-      "itemtype": "property",
-      "name": "click",
-      "access": "public",
-      "tagname": "",
-      "passed": "",
-      "class": "Component.RadButton",
-      "srcFileId": "addon_components_rad-button.js"
-    },
-    {
-      "file": "addon/components/rad-button.js",
-      "line": 65,
+      "line": 66,
       "description": "<p>Pass true to create a button that looks and behaves like a link. This is\nuseful for creating accessible interaction targets.</p>\n",
       "itemtype": "property",
       "name": "link",
@@ -361,7 +356,18 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 204,
+      "line": 76,
+      "description": "<p>Pass a {{c-l 'brand'}} along with <code>true</code> for <code>outline</code> to include outline style\nclasses.</p>\n",
+      "itemtype": "property",
+      "name": "outline",
+      "type": "{boolean}",
+      "default": "false",
+      "class": "Component.RadButton",
+      "srcFileId": "addon_components_rad-button.js"
+    },
+    {
+      "file": "addon/components/rad-button.js",
+      "line": 209,
       "description": "<p>Button DOM element</p>\n",
       "itemtype": "property",
       "name": "tagName",
@@ -372,7 +378,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 84,
+      "line": 93,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagaction",
@@ -386,7 +392,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 75,
+      "line": 84,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagcategory",
@@ -400,7 +406,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 113,
+      "line": 122,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagcd",
@@ -414,7 +420,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 122,
+      "line": 131,
       "description": "<p>Tagging property. Handles firing a tag on hover when true.</p>\n",
       "itemtype": "property",
       "name": "taghover",
@@ -428,7 +434,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 93,
+      "line": 102,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation. Set to undefined\nso the tagging service will properly correct an un-passed value.</p>\n",
       "itemtype": "property",
       "name": "taglabel",
@@ -442,7 +448,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 131,
+      "line": 140,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagonce",
@@ -456,7 +462,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 104,
+      "line": 113,
       "description": "<p>Tagging property. See <code>one-tag</code> for tagging documentation.</p>\n",
       "itemtype": "property",
       "name": "tagvalue",
@@ -470,7 +476,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 211,
+      "line": 216,
       "description": "<p>Include type button for usability.</p>\n",
       "itemtype": "property",
       "name": "type",
@@ -483,7 +489,7 @@
   "event": [
     {
       "file": "addon/components/rad-button.js",
-      "line": 222,
+      "line": 227,
       "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
       "itemtype": "event",
       "name": "mouseDown",
@@ -496,7 +502,7 @@
     },
     {
       "file": "addon/components/rad-button.js",
-      "line": 253,
+      "line": 258,
       "description": "<p>The <code>mouseEnter</code> checks for a tagging category and hover flag. If they're\npresent a tag is fired.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code>\nTODO: Only include this if Tagging feature is enabled</p>\n",
       "itemtype": "event",
       "name": "mouseEnter",
