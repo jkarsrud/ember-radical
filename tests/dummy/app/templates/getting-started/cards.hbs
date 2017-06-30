@@ -4,45 +4,7 @@
 <section>
   <h3>Examples</h3>
 
-  {{! V1 }}
   {{code-example
-    title='Basic Example'
-    language='handlebars'
-    code=
-"{{#rad-card as |components|}}
-  {{#components.body}}Simple card{{/components.body}}
-{{/rad-card}}"}}
-
-  {{code-example
-    title='Extended Examples'
-    language='handlebars'
-    code=
-"{{#rad-card as |components|}}
-  {{#components.title}}Simple card w/ title{{/components.title}}
-  {{#components.body}}Some content{{/components.body}}
-{{/rad-card}}
-
-{{#rad-card as |components|}}
-  {{#components.title}}Simple card w/ header and footer{{/components.title}}
-  {{#components.body}}Some content{{/components.body}}
-  {{#components.footer}}Footer content{{/components.footer}}
-{{/rad-card}}
-
-{{#rad-card brand='primary' as |components|}}
-  {{#components.title}}Branded Header{{/components.title}}
-  {{#components.body}}Some content{{/components.body}}
-{{/rad-card}}
-
-{{#rad-card brand='primary' as |components|}}
-  {{#components.title}}Branded card w/ custom content{{/components.title}}
-  {{#components.body}}
-    {{#rad-button}}Button{{/rad-button}}
-  {{/components.body}}
-  {{#components.footer}}Footer content{{/components.footer}}
-{{/rad-card}}"}}
-
-  {{! V2 }}
-  {{!--{{code-example
     title='Basic Example'
     language='handlebars'
     code=
@@ -59,7 +21,7 @@
       title='Extended Examples'
       language='handlebars'
       code=
-  "{{#rad-card as |c|}}
+  "{{#rad-card classNames='mb-4' as |c|}}
     {{#c.block}}
     {{#c.title}}Card title{{/c.title}}
     <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
@@ -69,7 +31,7 @@
   {{/c.block}}
 {{/rad-card}}
 
-{{#rad-card as |c|}}
+{{#rad-card classNames='mb-4' as |c|}}
   {{#c.header}}
     Featured
   {{/c.header}}
@@ -81,7 +43,7 @@
 {{/rad-card}}
 
 {{#rad-card
-  classNames='mb-3 text-center card-inverse'
+  classNames='mb-4 text-center card-inverse'
   brand='primary'
   as |c|}}
   {{#c.block}}
@@ -90,7 +52,7 @@
       <footer>Someone famous in <cite title='Source Title'>Source Title</cite></footer>
     </blockquote>
   {{/c.block}}
-{{/rad-card}}"}}--}}
+{{/rad-card}}"}}
 
 </section>
 <section>
@@ -104,7 +66,7 @@
     {{#components.content
       label='Passed'
       elementId='passedProps'}}
-      <table class="full-width">
+      <table class="table w-100">
         <thead>
           <tr>
             <th>Name</th>
@@ -128,7 +90,7 @@
     {{/components.content}}
     {{#components.content
       label='Yielded'}}
-      <table class="full-width">
+      <table class="table w-100">
         <thead>
           <tr>
             <th>Name</th>

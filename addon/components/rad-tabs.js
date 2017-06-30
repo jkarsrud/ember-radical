@@ -340,7 +340,8 @@ export default Component.extend({
         </li>
       {{/each}}
     </ul>
-    <div class="content-container {{if card 'rad-card'}}">
+    {{!TODO Use card component to handle this wrapper}}
+    <div class="content-container {{if card 'card'}}">
       {{! Yield the rad-tabs/content component pre-bound with internal props }}
       {{yield
         (hash

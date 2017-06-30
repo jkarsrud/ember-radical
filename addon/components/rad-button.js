@@ -34,6 +34,7 @@ if (TAGGING) {
     /**
      * Internal method that handles firiing a tag with or without custom dimensions.
      * @method _fireTag
+     * @protected
      * @return {undefined}
      */
     _fireTag() {
@@ -51,112 +52,91 @@ if (TAGGING) {
 
 export default Component.extend(taggingAssets, {
 
-  // Passed Properties
+  // Props
   // ---------------------------------------------------------------------------
-
   /**
    * Pass a brand to have `btn-${brand}` class applied
-   * @property brand
-   * @passed
-   * @public
-   * @type {?string}
+   * @property {?string} brand
    * @default null
+   * @public
    */
   brand: null,
   /**
-   * Pass true to create a button that looks and behaves like a link. This is
+   * Pass true to create a button that looks and behaves like an anchor. This is
    * useful for creating accessible interaction targets.
-   * @property link
-   * @passed
-   * @public
-   * @type {Boolean}
+   * @property {boolean} link
    * @default false
+   * @public
    */
   link: false,
   /**
    * Pass a {{c-l 'brand'}} along with `true` for `outline` to include outline style
    * classes.
-   * @property outline
-   * @type {boolean}
+   * @property {boolean} outline
    * @default false
+   * @public
    */
   outline: false,
   /**
-   * Tagging property. See `one-tag` for tagging documentation.
-   * @property tagcategory
-   * @passed
-   * @public
-   * @type {string}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * @property {string} tagcategory
    * @default ''
+   * @public
    */
   tagcategory: '',
   /**
-   * Tagging property. See `one-tag` for tagging documentation.
-   * @property tagaction
-   * @passed
-   * @public
-   * @type {string}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * @property {string} tagaction
    * @default ''
+   * @public
    */
   tagaction: '',
   /**
-   * Tagging property. See `one-tag` for tagging documentation. Set to undefined
-   * so the tagging service will properly correct an un-passed value.
-   *
-   * @property taglabel
-   * @passed
-   * @public
-   * @type {string}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * Set to `null` so the tagging service will properly correct an un-passed value.
+   * @property {string} taglabel
    * @default null
+   * @public
    */
   taglabel: null,
   /**
-   * Tagging property. See `one-tag` for tagging documentation.
-   * @property tagvalue
-   * @passed
-   * @public
-   * @type {string}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * @property {string} tagvalue
    * @default ''
+   * @public
    */
   tagvalue: '',
   /**
-   * Tagging property. See `one-tag` for tagging documentation.
-   * @property tagcd
-   * @passed
-   * @public
-   * @type {Object}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * @property {Object} tagcd
    * @default null
+   * @public
    */
   tagcd: null,
   /**
    * Tagging property. Handles firing a tag on hover when true.
-   * @property taghover
-   * @passed
-   * @public
-   * @type {Boolean}
+   * @property {boolean} taghover
    * @default false
+   * @public
    */
   taghover: false,
   /**
-   * Tagging property. See `one-tag` for tagging documentation.
-   * @property tagonce
-   * @passed
-   * @public
-   * @type {Boolean}
+   * Tagging property. See {{c-l class='Service.Tagging'}} for tagging documentation.
+   * @property {boolean} tagonce
    * @default false
+   * @public
    */
   tagonce: false,
 
-  // Properties
+  // State
   // ---------------------------------------------------------------------------
-
   /**
    * Generate color class using presence of {{c-l 'brand'}} and {{c-l 'outline'}}
    * flags.
-   * @property brandClass
-   * @type {string}
-   * @param 'brand'
-   * @param 'outline'
+   * @property {string} brandClass
+   * @protected
+   * @param {string} brand
+   * @param {string} outline
    */
   brandClass: computed('brand', 'outline', function() {
     if (this.get('outline')) {
@@ -166,15 +146,14 @@ export default Component.extend(taggingAssets, {
     }
   }),
 
-  // Ember Props
+  // Component
   // ---------------------------------------------------------------------------
-
   /**
-   * ALLLLLLLLLLL the attributes you might need.
    * NOTE: `role` should not be bound here. You can set the role of a button
    * by passing an [ariaRole](http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole) prop.
-   * @property attributeBindings
-   * @type {Array}
+   * @property {Array} attributeBindings
+   * @default ['aria-controls', 'aria-describedby', 'aria-expanded', 'aria-hidden', 'aria-label', 'aria-labelledby', 'data-test', 'disabled', 'type']
+   * @public
    */
   attributeBindings: [
     'aria-controls',
@@ -188,18 +167,18 @@ export default Component.extend(taggingAssets, {
     'type'
   ],
   /**
-   * Bind standard rad classname for component: `rad-button`
-   * @property classNames
-   * @type {Array}
+   * @property {Array} classNames
+   * @default ['rad-button', 'btn']
+   * @public
    */
   classNames: [
     'rad-button',
     'btn'
   ],
   /**
-   * Handle binding brand and link related css class names
-   * @property classNameBindings
-   * @type {Array}
+   * @property {Array} classNameBindings
+   * @default ['brandClass', 'link:btn-link', 'link:btn-unstyled']
+   * @public
    */
   classNameBindings: [
     'brandClass',
@@ -207,23 +186,18 @@ export default Component.extend(taggingAssets, {
     'link:btn-unstyled'
   ],
   /**
-   * Button DOM element
-   * @property tagName
-   * @type {string}
+   * @property {string} tagName
    * @default 'button'
    */
   tagName: 'button',
   /**
-   * Include type button for usability.
-   * @property type
-   * @type {string}
+   * @property {string} type
    * @default 'button'
    */
   type: 'button',
 
   // Events
   // ---------------------------------------------------------------------------
-
   /**
    * The `mouseDown` event is used for some utility/housekeeping methods because
    * we use the `click` event to pass in actions.
@@ -237,7 +211,7 @@ export default Component.extend(taggingAssets, {
    *
    * If you need to override this event, be sure to call `this._super();`
    * @event mouseDown
-   * @return {undefined}
+   * @protected
    */
   mouseDown() {
     // Hide outline b/c this was a legit mouse click
@@ -262,7 +236,7 @@ export default Component.extend(taggingAssets, {
    * If you need to override this event, be sure to call `this._super();`
    * TODO: Only include this if Tagging feature is enabled
    * @event mouseEnter
-   * @return {undefined}
+   * @protected
    */
   mouseEnter() {
     if (TAGGING) {

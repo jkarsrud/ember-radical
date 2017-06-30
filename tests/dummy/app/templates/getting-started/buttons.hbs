@@ -13,21 +13,15 @@
   <h3>Examples</h3>
 
   {{code-example
-    title='Basic Button with an Action'
-    language='handlebars'
-    code="{{#rad-button click=(action 'exampleAction')}}Radical Button{{/rad-button}}"}}
-  <br>
-
-  {{code-example
     title='Style Options'
     language='handlebars'
     code="
-    {{#rad-button brand='primary'}}Primary{{/rad-button}}
-    {{#rad-button brand='success'}}Success{{/rad-button}}
-    {{#rad-button brand='info'}}Info{{/rad-button}}
-    {{#rad-button brand='warning'}}Warning{{/rad-button}}
-    {{#rad-button brand='danger'}}Danger{{/rad-button}}
-    {{#rad-button classNames='btn-link'}}Link{{/rad-button}}"}}
+    {{#rad-button brand='primary' click=(action 'exampleAction')}}Primary{{/rad-button}}
+    {{#rad-button brand='success' click=(action 'exampleAction')}}Success{{/rad-button}}
+    {{#rad-button brand='info' click=(action 'exampleAction')}}Info{{/rad-button}}
+    {{#rad-button brand='warning' click=(action 'exampleAction')}}Warning{{/rad-button}}
+    {{#rad-button brand='danger' click=(action 'exampleAction')}}Danger{{/rad-button}}
+    {{#rad-button classNames='btn-link' click=(action 'exampleAction')}}Link{{/rad-button}}"}}
 
   {{code-example
     title='Outline Style'
@@ -104,7 +98,7 @@
     {{#components.content
       label='Analytics'
       elementId='analyticsProps'}}
-      <table class="full-width">
+      <table class="table w-100">
         <thead>
           <tr>
             <th>Name</th>

@@ -19,29 +19,19 @@
 
 // Step #1: Import Theme Variables
 // ---------------------------------------------------------------------------
-// @import 'ember-radical/themes/clarity';
+@import 'ember-radical/themes/clarity';
 
 // Step #2: Import Bootstrap
 // Note that any theme variables you declare will override the default
 // Bootstrap variables. Any variables you don't declare will be populated
 // with the Boostrap defaults.
 // ---------------------------------------------------------------------------
-// @import 'bootstrap';
+@import 'bootstrap';
 
 // Step #3: Import Component Styles
 // ---------------------------------------------------------------------------
-// @import 'ember-radical/components';
+@import 'ember-radical/components';
 
-
-
-
-// ========================================================
-// Radical 1.0 Styles Import
-// ========================================================
-
-// Base line set by Ember Radical styles
-// ---------------------------------------------------------------------------
-@import "ember-radical/styles";
 
 // Demo Site Elements
 // ---------------------------------------------------------------------------
@@ -52,7 +42,5 @@
 @import "guides/rad-guide";
 @import "guides/landing";
 
-// Keep paragraphs at a readable length
-p {
-  max-width: 750px;
-}
+// Keep paragraphs at a readable length for guides readability
+p { max-width: 750px; }

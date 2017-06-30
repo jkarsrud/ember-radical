@@ -118,16 +118,15 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   layout: hbs`
-    {{#rad-card as |components|}}
-      {{#components.title
-        classNames='code-card-title'}}
-        <span class="example-title">{{title}}</span>
+    {{#rad-card classNames= 'mb-4' as |components|}}
+      {{#components.header classNames='d-flex align-items-center'}}
+        <span class="col">{{title}}</span>
         {{#rad-button
           brand='secondary'
-          classNames='code-toggle-button'
+          classNames='d-flex'
           click=(action 'toggleCode')}}<b>&lt;/&gt;</b>{{/rad-button}}
-      {{/components.title}}
-      {{#components.body}}
+      {{/components.header}}
+      {{#components.block}}
         <div class="code-block{{if showCode '' ' hidden'}}" style={{codeBlockHeightCSS}}>
           {{highlight-code code=code language=language}}
         </div>
@@ -137,7 +136,7 @@ export default Component.extend({
           {{/if}}
           {{yield}}
         </div>
-      {{/components.body}}
+      {{/components.block}}
     {{/rad-card}}
   `
 });

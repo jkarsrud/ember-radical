@@ -32,7 +32,7 @@ export default Component.extend({
     <div class="page-title">
       <h1>{{radical.currentRouteTitle}}</h1>
     </div>
-    <div class="container rad-guide">
+    <div class="container rad-guide pb-5">
       <div class="row">
         <div class="col-xs-12 col-lg-9">
           <div class="rad-guide-content">
