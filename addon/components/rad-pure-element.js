@@ -1,11 +1,10 @@
 import Component from 'ember-component';
 
 /**
- * Library component used within contextual components to create elements with
- * assigned classes.
- *
- * Class name should be assigned through {{c-l 'elementClassNames'}}.
- * @class Component.RadClassnamed
+ * Library component used within contextual components to create DOM elements with
+ * assigned class names. Class names should be assigned through {{c-l
+ * 'elementClassNames'}}.
+ * @class Component.RadPureElement
  * @constructor
  * @extends Ember.Component
  */

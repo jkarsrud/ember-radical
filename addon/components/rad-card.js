@@ -54,28 +54,28 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   /**
    * @property {string} blockComponent
-   * @default 'rad-classnamed'
+   * @default 'rad-pure-element'
    * @public
    */
-  blockComponent: 'rad-classnamed',
+  blockComponent: 'rad-pure-element',
   /**
    * @property {string} footerComponent
-   * @default 'rad-classnamed'
+   * @default 'rad-pure-element'
    * @public
    */
-  footerComponent: 'rad-classnamed',
+  footerComponent: 'rad-pure-element',
   /**
    * @property {string} headerComponent
-   * @default 'rad-classnamed'
+   * @default 'rad-pure-element'
    * @public
    */
-  headerComponent: 'rad-classnamed',
+  headerComponent: 'rad-pure-element',
   /**
    * @property {string} titleComponent
-   * @default 'rad-classnamed'
+   * @default 'rad-pure-element'
    * @public
    */
-  titleComponent: 'rad-classnamed',
+  titleComponent: 'rad-pure-element',
 
   // Component
   // ---------------------------------------------------------------------------
