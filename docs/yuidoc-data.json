@@ -1,33 +1,6 @@
 {
   "project": {},
   "files": {
-    "addon/components/rad-card/body.js": {
-      "name": "addon/components/rad-card/body.js",
-      "modules": {},
-      "classes": {
-        "Component.RadCard.Body": 1
-      },
-      "fors": {},
-      "namespaces": {}
-    },
-    "addon/components/rad-card/footer.js": {
-      "name": "addon/components/rad-card/footer.js",
-      "modules": {},
-      "classes": {
-        "Component.RadCard.Footer": 1
-      },
-      "fors": {},
-      "namespaces": {}
-    },
-    "addon/components/rad-card/title.js": {
-      "name": "addon/components/rad-card/title.js",
-      "modules": {},
-      "classes": {
-        "Component.RadCard.Title": 1
-      },
-      "fors": {},
-      "namespaces": {}
-    },
     "addon/components/rad-drawer/content.js": {
       "name": "addon/components/rad-drawer/content.js",
       "modules": {},
@@ -150,6 +123,15 @@
       "modules": {},
       "classes": {
         "Component.RadCard": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/rad-classnamed.js": {
+      "name": "addon/components/rad-classnamed.js",
+      "modules": {},
+      "classes": {
+        "Component.RadClassnamed": 1
       },
       "fors": {},
       "namespaces": {}
@@ -292,45 +274,6 @@
   },
   "modules": {},
   "classes": {
-    "Component.RadCard.Body": {
-      "name": "Component.RadCard.Body",
-      "shortname": "Component.RadCard.Body",
-      "classitems": [],
-      "plugins": [],
-      "extensions": [],
-      "plugin_for": [],
-      "extension_for": [],
-      "file": "addon/components/rad-card/body.js",
-      "line": 4,
-      "is_constructor": 1,
-      "extends": "Ember.Component"
-    },
-    "Component.RadCard.Footer": {
-      "name": "Component.RadCard.Footer",
-      "shortname": "Component.RadCard.Footer",
-      "classitems": [],
-      "plugins": [],
-      "extensions": [],
-      "plugin_for": [],
-      "extension_for": [],
-      "file": "addon/components/rad-card/footer.js",
-      "line": 4,
-      "is_constructor": 1,
-      "extends": "Ember.Component"
-    },
-    "Component.RadCard.Title": {
-      "name": "Component.RadCard.Title",
-      "shortname": "Component.RadCard.Title",
-      "classitems": [],
-      "plugins": [],
-      "extensions": [],
-      "plugin_for": [],
-      "extension_for": [],
-      "file": "addon/components/rad-card/title.js",
-      "line": 4,
-      "is_constructor": 1,
-      "extends": "Ember.Component"
-    },
     "Component.RadDrawer.Content": {
       "name": "Component.RadDrawer.Content",
       "shortname": "Component.RadDrawer.Content",
@@ -494,7 +437,7 @@
       "plugin_for": [],
       "extension_for": [],
       "file": "addon/components/rad-alert.js",
-      "line": 5,
+      "line": 8,
       "description": "Multi-use alerts for in-page error messaging, pop-up alerts, notifications,\nand more.\n\n### Usage\n\n#### 1. Basic usage\nAlerts accept a `brand` property to change the alert color.\n\n```glimmer\n{{#rad-alert brand=\"primary\"}}Even hunks were boys once. Pretty little boy hunks!{{/rad-alert}}\n{{#rad-alert brand=\"secondary\"}}If you’re raking the leaves and it gets all over your driveway, just hose it off dummy.{{/rad-alert}}\n{{#rad-alert brand=\"success\"}}You have smelly body parts? Smelly under your arms? In the armpits? Just… just put some vinegar on it! Why didn’t you think of that?{{/rad-alert}}\n{{#rad-alert brand=\"info\"}}I’ll be brack.{{/rad-alert}}\n{{#rad-alert brand=\"warning\"}}Life comes from eggs. Not just for omelettes, ya dingus, you could make a baby boy or a baby girl too.{{/rad-alert}}\n{{#rad-alert brand=\"danger\"}}Go to bed early you doofus, ‘cause when you’re sleeping there’s no lonely times, just dreams.{{/rad-alert}}\n```\n\n#### 2. Dismissing\nBy default alerts are dismissible. You can disable this by passing a\n`canDismiss` property.\n\n```glimmer\n{{#rad-alert brand=\"primary\" canDismiss=false}}Try to dismiss this, ya dingus.{{/rad-alert}}\n```\n\nWhen alerts are dismissed they also fire an `onDismiss` action.\n\n```glimmer\n{{#rad-alert brand=\"primary\" onDismiss=(action \"handleDismiss\")}}Dismiss me!{{/rad-alert}}\n```",
       "is_constructor": 1,
       "extends": "Ember.Component"
@@ -522,8 +465,22 @@
       "plugin_for": [],
       "extension_for": [],
       "file": "addon/components/rad-card.js",
-      "line": 5,
-      "description": "Core card.\n\n```handlebars\n{{#rad-card as |components|}}\n  {{#components.title}}Card title{{/components.title}}\n  {{#components.body}}Card body{{/components.body}}\n  {{#components.footer}}Card footer{{/components.footer}}\n{{/rad-card}}\n```\n\n{{#rad-card as |components|}}\n  {{#components.title}}Party Time{{/components.title}}\n  {{#components.body}}<img src=\"http://i.giphy.com/125RIkH7IluIpy.gif\"/>{{/components.body}}\n{{/rad-card}}",
+      "line": 7,
+      "description": "Core card.\n\n```handlebars\n{{#rad-card as |components|}}\n  {{#components.block}}\n    {{#components.title}}Card title{{/components.title}}\n    Card body\n  {{/components.block}}\n  {{#components.footer}}Card footer{{/components.footer}}\n{{/rad-card}}\n```\n\n{{#rad-card as |components|}}\n  {{#components.block}}\n    {{#components.title}}Party Time{{/components.title}}\n    <img src=\"http://i.giphy.com/125RIkH7IluIpy.gif\"/>\n  {{/components.block}}\n{{/rad-card}}",
+      "is_constructor": 1,
+      "extends": "Ember.Component"
+    },
+    "Component.RadClassnamed": {
+      "name": "Component.RadClassnamed",
+      "shortname": "Component.RadClassnamed",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "file": "addon/components/rad-classnamed.js",
+      "line": 3,
+      "description": "Library component used within contextual components to create elements with\nassigned classes.\n\nClass name should be assigned through {{c-l '_classNames'}}.",
       "is_constructor": 1,
       "extends": "Ember.Component"
     },
@@ -751,87 +708,6 @@
   },
   "elements": {},
   "classitems": [
-    {
-      "file": "addon/components/rad-card/body.js",
-      "line": 14,
-      "description": "Bind standard core class: `card-body`",
-      "itemtype": "property",
-      "name": "cardBodyClassNames",
-      "type": "{Array}",
-      "class": "Component.RadCard.Body"
-    },
-    {
-      "file": "addon/components/rad-card/body.js",
-      "line": 24,
-      "description": "Bound attributes:\n- `data-test`: for precise testing identification",
-      "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Body"
-    },
-    {
-      "file": "addon/components/rad-card/body.js",
-      "line": 31,
-      "description": "Bind props to classes on the root component element.",
-      "itemtype": "property",
-      "name": "classNameBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Body"
-    },
-    {
-      "file": "addon/components/rad-card/footer.js",
-      "line": 14,
-      "description": "Bind standard core class: `card-footer`",
-      "itemtype": "property",
-      "name": "cardFooterClassNames",
-      "type": "{Array}",
-      "class": "Component.RadCard.Footer"
-    },
-    {
-      "file": "addon/components/rad-card/footer.js",
-      "line": 24,
-      "description": "Bound attributes:\n- `data-test`: for precise testing identification",
-      "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Footer"
-    },
-    {
-      "file": "addon/components/rad-card/footer.js",
-      "line": 31,
-      "description": "Bind props to classes on the root component element.",
-      "itemtype": "property",
-      "name": "classNameBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Footer"
-    },
-    {
-      "file": "addon/components/rad-card/title.js",
-      "line": 14,
-      "description": "Bind standard core class: `card-title`",
-      "itemtype": "property",
-      "name": "cardTitleClassNames",
-      "type": "{Array}",
-      "class": "Component.RadCard.Title"
-    },
-    {
-      "file": "addon/components/rad-card/title.js",
-      "line": 24,
-      "description": "Bound attributes:\n- `data-test`: for precise testing identification",
-      "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Title"
-    },
-    {
-      "file": "addon/components/rad-card/title.js",
-      "line": 31,
-      "description": "Bind props to classes on the root component element.",
-      "itemtype": "property",
-      "name": "classNameBindings",
-      "type": "{Array}",
-      "class": "Component.RadCard.Title"
-    },
     {
       "file": "addon/components/rad-drawer/content.js",
       "line": 17,
@@ -1604,8 +1480,8 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 45,
-      "description": "Specify brand, component handles assigning correct css class",
+      "line": 48,
+      "description": "Alert style. Eg: `success`, `info`, `warning`, `danger`",
       "itemtype": "property",
       "name": "brand",
       "default": "''",
@@ -1616,10 +1492,23 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 53,
-      "description": "Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.\n\n**Usage:**\nOverride by passing `false` into this param in your handlebars template:\n\n```handlebars\n{{#rad-alert canDismiss=false}}\n  {{! Standard template content goes here }}\n{{/rad-alert}}\n```",
+      "line": 56,
+      "description": "**NOTE:** Use property {{c-l 'dismissible'}} instead of `canDismiss`.\n\nWhether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.\n\n**Usage:**\nOverride by passing `false` into this param in your handlebars template:\n\n```handlebars\n{{#rad-alert canDismiss=false}}\n  {{! Standard template content goes here }}\n{{/rad-alert}}\n```",
       "itemtype": "property",
       "name": "canDismiss",
+      "type": "{boolean}",
+      "deprecated": true,
+      "default": "true",
+      "access": "public",
+      "tagname": "",
+      "class": "Component.RadAlert"
+    },
+    {
+      "file": "addon/components/rad-alert.js",
+      "line": 78,
+      "description": "If true, the alert will show the close button in upper right corner and hide\nitself on click. Is defaulted to true, pass `false` to create an alert that\ncannot be dismissed:\n\n```glimmer\n{{#rad-alert style='danger' dismissible=false}}\n  This alert cannot be dismissed.\n{{/rad-alert}}\n```",
+      "itemtype": "property",
+      "name": "dismissible",
       "type": "{boolean}",
       "default": "true",
       "access": "public",
@@ -1628,10 +1517,29 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 72,
-      "description": "Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.",
+      "line": 94,
+      "description": "Component hook called when the component is dismissed by user. Is called with\nparams of `this`, the component instance and the `evt`.",
+      "itemtype": "method",
+      "name": "onDeactivate",
+      "passed": "",
+      "class": "Component.RadAlert"
+    },
+    {
+      "file": "addon/components/rad-alert.js",
+      "line": 101,
+      "description": "Component hook called after the dismiss logic has fired. Is called with\nparams of `this`, the component instance and the `evt`.",
+      "itemtype": "method",
+      "name": "onDeactivated",
+      "passed": "",
+      "class": "Component.RadAlert"
+    },
+    {
+      "file": "addon/components/rad-alert.js",
+      "line": 108,
+      "description": "**NOTE:** Use property {{c-l 'onDeactivated'}}\n\nContains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.",
       "itemtype": "property",
       "name": "onDismiss",
+      "deprecated": true,
       "type": "{function}",
       "default": "() => {}",
       "access": "public",
@@ -1640,12 +1548,22 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 84,
+      "line": 123,
+      "description": "A++ accessibility. Tells a screen this component is an alert.",
+      "itemtype": "property",
+      "name": "ariaRole",
+      "type": "{string}",
+      "default": "'alert'",
+      "class": "Component.RadAlert"
+    },
+    {
+      "file": "addon/components/rad-alert.js",
+      "line": 130,
       "description": "Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{string}",
-      "access": "private",
+      "access": "protected",
       "tagname": "",
       "class": "Component.RadAlert",
       "subprops": [
@@ -1657,35 +1575,25 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 95,
-      "description": "A++ accessibility. Tells a screen this component is an alert.",
-      "itemtype": "property",
-      "name": "ariaRole",
-      "type": "{string}",
-      "default": "'alert'",
-      "class": "Component.RadAlert"
-    },
-    {
-      "file": "addon/components/rad-alert.js",
-      "line": 106,
-      "description": "Auto-binds `data-test` attributes",
+      "line": 144,
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
+      "default": "['data-test']",
       "class": "Component.RadAlert"
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 113,
+      "line": 150,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "default": "['rad-alert']",
+      "default": "['alert', 'rad-alert']",
       "class": "Component.RadAlert"
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 119,
+      "line": 156,
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
@@ -1694,19 +1602,15 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 129,
-      "description": "Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.",
+      "line": 165,
+      "description": "Provide deprecation warnings for v2 on init.",
       "itemtype": "method",
-      "name": "_selfDestruct",
-      "return": {
-        "description": "",
-        "type": "Undefined"
-      },
+      "name": "init",
       "class": "Component.RadAlert"
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 148,
+      "line": 183,
       "description": "Actions hash",
       "itemtype": "property",
       "name": "actions",
@@ -1715,14 +1619,11 @@
     },
     {
       "file": "addon/components/rad-alert.js",
-      "line": 154,
+      "line": 189,
       "description": "A proxy action for the selfDestruct method",
       "itemtype": "method",
       "name": "dismiss",
-      "return": {
-        "description": "",
-        "type": "Undefined"
-      },
+      "action": "",
       "class": "Component.RadAlert"
     },
     {
@@ -1956,7 +1857,7 @@
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 30,
+      "line": 35,
       "description": "Pass a brand to use to style the component and it's child components.",
       "itemtype": "property",
       "name": "brand",
@@ -1966,86 +1867,73 @@
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 37,
-      "description": "Custom className(s) to use on the body subcomponent's root element",
+      "line": 45,
       "itemtype": "property",
-      "name": "cardBodyClassNames",
-      "type": "{string}",
-      "class": "Component.RadCard"
-    },
-    {
-      "file": "addon/components/rad-card.js",
-      "line": 43,
-      "description": "Custom className(s) to use on `rad-card`'s root element",
-      "itemtype": "property",
-      "name": "cardClassNames",
-      "type": "{string}",
-      "class": "Component.RadCard"
-    },
-    {
-      "file": "addon/components/rad-card.js",
-      "line": 49,
-      "description": "Custom className(s) to use on the footer subcomponent's root element",
-      "itemtype": "property",
-      "name": "cardFooterClassNames",
-      "type": "{string}",
-      "class": "Component.RadCard"
-    },
-    {
-      "file": "addon/components/rad-card.js",
-      "line": 55,
-      "description": "Custom className(s) to use on the title subcomponent's root element",
-      "itemtype": "property",
-      "name": "cardTitleClassNames",
-      "type": "{string}",
-      "class": "Component.RadCard"
-    },
-    {
-      "file": "addon/components/rad-card.js",
-      "line": 65,
-      "itemtype": "property",
-      "name": "bodyComponent",
+      "name": "blockComponent",
       "type": "{string}",
       "passed": "",
       "optional": 1,
-      "default": "'rad-card/body'",
+      "default": "'rad-classnamed'",
       "class": "Component.RadCard"
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 73,
+      "line": 53,
+      "itemtype": "property",
+      "name": "bodyComponent",
+      "deprecated": true,
+      "type": "{string}",
+      "passed": "",
+      "optional": 1,
+      "default": "'rad-classnamed'",
+      "class": "Component.RadCard"
+    },
+    {
+      "file": "addon/components/rad-card.js",
+      "line": 62,
       "itemtype": "property",
       "name": "footerComponent",
       "type": "{string}",
       "passed": "",
       "optional": 1,
-      "default": "'rad-card/footer'",
+      "default": "'rad-classnamed'",
       "class": "Component.RadCard"
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 81,
+      "line": 70,
+      "itemtype": "property",
+      "name": "headerComponent",
+      "type": "{string}",
+      "passed": "",
+      "optional": 1,
+      "default": "'rad-classnamed'",
+      "class": "Component.RadCard"
+    },
+    {
+      "file": "addon/components/rad-card.js",
+      "line": 78,
       "itemtype": "property",
       "name": "titleComponent",
       "type": "{string}",
       "passed": "",
       "optional": 1,
-      "default": "'rad-card/title'",
+      "default": "'rad-classnamed'",
       "class": "Component.RadCard"
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 93,
-      "description": "Bound attributes:\n- `data-test`: for precise testing identification",
+      "line": 89,
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
+      "default": "'data-test'",
       "class": "Component.RadCard"
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 100,
-      "description": "Computed css class for the brand bound to the component.",
+      "line": 95,
+      "description": "Computed css class for the brand bound to the component.\nTODO: v2 remove card-default",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{String}",
@@ -2053,21 +1941,40 @@
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 108,
-      "description": "Bind standard core class: `card-footer`",
+      "line": 104,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
+      "default": "'card rad-card'",
       "class": "Component.RadCard"
     },
     {
       "file": "addon/components/rad-card.js",
-      "line": 114,
+      "line": 110,
       "description": "Bind props to classes on the root component element.",
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
       "class": "Component.RadCard"
+    },
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 13,
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "default": "['data-test']",
+      "class": "Component.RadClassnamed"
+    },
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 19,
+      "description": "Internally assigned classNames by contextual props cannot be passed through\n`classNames` prop or they will be overridden by any consumer that also passes\na `classNames`. Binding the private `_classNames` allows us to assign classes\nthrough contexutal components.",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "default": "['_classNames']",
+      "class": "Component.RadClassnamed"
     },
     {
       "file": "addon/components/rad-drawer.js",
@@ -3748,6 +3655,18 @@
     },
     {
       "message": "unknown tag: passed",
+      "line": " addon/components/rad-alert.js:94"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/rad-alert.js:101"
+    },
+    {
+      "message": "unknown tag: action",
+      "line": " addon/components/rad-alert.js:189"
+    },
+    {
+      "message": "unknown tag: passed",
       "line": " addon/components/rad-button.js:57"
     },
     {
@@ -3784,15 +3703,23 @@
     },
     {
       "message": "unknown tag: passed",
-      "line": " addon/components/rad-card.js:65"
+      "line": " addon/components/rad-card.js:45"
     },
     {
       "message": "unknown tag: passed",
-      "line": " addon/components/rad-card.js:73"
+      "line": " addon/components/rad-card.js:53"
     },
     {
       "message": "unknown tag: passed",
-      "line": " addon/components/rad-card.js:81"
+      "line": " addon/components/rad-card.js:62"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/rad-card.js:70"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/rad-card.js:78"
     },
     {
       "message": "unknown tag: passed",

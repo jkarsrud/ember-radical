@@ -2,9 +2,15 @@
   "parser": "YUIDoc",
   "name": "Ember Radical Docs",
   "description": "API documentation for Ember Radical Components, Helpers and Services",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "repository": "https://github.com/healthsparq/ember-radical",
-  "guides": [],
+  "guides": [
+    {
+      "id": "radical-v2",
+      "linkLabel": "radical-v2",
+      "type": "guides"
+    }
+  ],
   "modules": [],
   "classes": [
     {
@@ -20,15 +26,7 @@
       "type": "classes"
     },
     {
-      "name": "Component.RadCard.Body",
-      "type": "classes"
-    },
-    {
-      "name": "Component.RadCard.Footer",
-      "type": "classes"
-    },
-    {
-      "name": "Component.RadCard.Title",
+      "name": "Component.RadClassnamed",
       "type": "classes"
     },
     {

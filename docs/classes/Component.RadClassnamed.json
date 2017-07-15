@@ -1,0 +1,62 @@
+{
+  "name": "Component.RadClassnamed",
+  "shortname": "Component.RadClassnamed",
+  "classitems": [
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 13,
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "default": "['data-test']",
+      "class": "Component.RadClassnamed",
+      "srcFileId": "addon_components_rad-classnamed.js"
+    },
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 19,
+      "description": "<p>Internally assigned classNames by contextual props cannot be passed through\n<code>classNames</code> prop or they will be overridden by any consumer that also passes\na <code>classNames</code>. Binding the private <code>_classNames</code> allows us to assign classes\nthrough contexutal components.</p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "default": "['_classNames']",
+      "class": "Component.RadClassnamed",
+      "srcFileId": "addon_components_rad-classnamed.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "file": "addon/components/rad-classnamed.js",
+  "line": 3,
+  "description": "<p>Library component used within contextual components to create elements with\nassigned classes.</p>\n<p>Class name should be assigned through {{c-l '_classNames'}}.</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 13,
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "default": "['data-test']",
+      "class": "Component.RadClassnamed",
+      "srcFileId": "addon_components_rad-classnamed.js"
+    },
+    {
+      "file": "addon/components/rad-classnamed.js",
+      "line": 19,
+      "description": "<p>Internally assigned classNames by contextual props cannot be passed through\n<code>classNames</code> prop or they will be overridden by any consumer that also passes\na <code>classNames</code>. Binding the private <code>_classNames</code> allows us to assign classes\nthrough contexutal components.</p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "default": "['_classNames']",
+      "class": "Component.RadClassnamed",
+      "srcFileId": "addon_components_rad-classnamed.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_rad-classnamed.js"
+}
